@@ -15,10 +15,12 @@ const config = {
   height,
   physics: {
     default: "arcade",
-    arcade: {
-    },
+    arcade: {},
   },
- 
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
   scene: [Preload, Bootstrap, Play, GameOver],
 };
 
