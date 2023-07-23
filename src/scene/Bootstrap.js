@@ -10,11 +10,12 @@ export default class Bootstrap extends Phaser.Scene {
   }
 
   create() {
+    this.add.image(width/2, height/2, "bg-bootstrap").setScale(0.55);
     this.background = this.add.rectangle(
-      650 / 2,
-      150 / 2,
-      650,
-      150,
+      width / 2,
+      height / 2,
+      width,
+      height,
       0x000000,
       0.6
     );
@@ -33,6 +34,7 @@ export default class Bootstrap extends Phaser.Scene {
     this.input.on("gameobjectdown", (pointer, gameobject) => {
       switch (gameobject) {
         case this.play:
+          this.scene.start("play");
           break;
       }
     });

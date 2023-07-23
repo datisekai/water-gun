@@ -33,7 +33,7 @@ export default class GameOver extends Phaser.Scene {
       switch (gameobject) {
         case this.play:
           this.scene.stop();
-          this.scene.start("game");
+          this.scene.start("play");
           break;
       }
     });

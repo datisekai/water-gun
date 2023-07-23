@@ -4,6 +4,7 @@ import Preload from "./scene/Preload";
 import Bootstrap from "./scene/Bootstrap";
 import Play from "./scene/Play";
 import configDefault from "./config";
+import GameOver from "./scene/Gameover";
 
 const { width, height } = configDefault;
 
@@ -15,10 +16,10 @@ const config = {
   physics: {
     default: "arcade",
     arcade: {
-      gravity: { y: 200 },
     },
   },
-  scene: [Preload, Bootstrap, Play],
+ 
+  scene: [Preload, Bootstrap, Play, GameOver],
 };
 
 export default new Phaser.Game(config);
